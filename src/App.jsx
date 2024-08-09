@@ -8,7 +8,7 @@ function App() {
   return (
 			<Router>
 				<Routes>
-					<Route exact path='/showcase' element={<HeroPage></HeroPage>}/>
+					<Route exact path='/showcase/' element={<HeroPage></HeroPage>}/>
 				</Routes>
 			</Router>
 				
