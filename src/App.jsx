@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './App.css'
+import Hamburger from './components/hamburger/hamburger'
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className ='sky'>
@@ -9,7 +11,8 @@ function App() {
       <div className="nebula"/>  
       <div className="pulsing-star"></div>
       <div className='appbar'>
-        <div className='menu-item'>
+       <div className='desktop-items'>
+       <div className='menu-item'>
         <p className='menu-item-text'>
           About us
         </p>
@@ -24,7 +27,12 @@ function App() {
           Contact
         </p>
         </div>
+       </div>
+       <div className='mobile-items'>
+        <Hamburger isOpen={menuOpen} color={'#ffa600'} onclick={()=>{ setMenuOpen(!menuOpen)}}></Hamburger>
       </div>
+      </div>
+      
      <div className= 'column'>
       <p className='title'>
         Enhance your digital presence

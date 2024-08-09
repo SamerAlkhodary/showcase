@@ -5,6 +5,15 @@
   padding: 0rem;
   text-align: center;
 }
+.desktop-items{
+  flex-direction: row;
+  flex:1;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  display: flex;
+
+}
 .appbar{
   flex-direction: row;
   flex:1;
@@ -184,9 +193,31 @@
     display: flex;
     flex-direction: column;
   }
+  .desktop-items{
+    flex-direction: row;
+    flex:1;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    display: flex;
+  }
+  .mobile-items{
+    
+    display: none;
+
+  }
   
  } 
  @media (max-width: 900px) {
+  .mobile-items{
+    flex-direction: row;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    display: flex;
+
+  }
   .column{
     position: absolute;
     top: 12em;
@@ -197,6 +228,9 @@
     justify-content: start;
     display: flex;
     flex-direction: column;
+  }
+  .desktop-items{
+    display:none;  
   }
 }
 .title{
