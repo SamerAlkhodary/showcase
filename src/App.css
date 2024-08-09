@@ -1,0 +1,210 @@
+
+
+#root {
+  margin: 0 0;
+  padding: 0rem;
+  text-align: center;
+}
+.appbar{
+  flex-direction: row;
+  flex:1;
+  width: 90vw;
+  align-items: center;
+  height: 10vh;
+  display: flex;
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,166,0,0.7) 40%, rgba(2,0,36,0) 100%);
+  
+  position: absolute;
+  justify-content: space-around;
+  top: 1em;
+  left:5vw;
+  border-radius: 25% 25% 25% 25% / 25% 25% 25% 0%;
+  overflow: hidden;
+}
+
+.menu-item {
+ 
+}
+
+
+.menu-item-text{
+  font-size: large;
+  font-weight: bold;
+}
+
+.menu-item-text:hover{
+  color:#ffa600;
+  font-size: large;
+  font-weight: bold;
+}
+
+.page{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  flex:1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+.pulsing-star {
+  position: absolute;
+  top:50vh;
+  left: 60vw;
+  right: 30vw;
+  bottom: 50vh;
+  width: 3px;
+  height: 3px;
+  background-color: #fff; /* Bright white color */
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* Glowing effect */
+  animation: pulse 6s infinite;
+}
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+      box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+
+.nebula {
+  position: relative;
+  width: 70vw;
+  height: 70vh;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1), transparent 80%),
+              radial-gradient(circle, rgba(255, 69, 0, 0.2), transparent 60%),
+              radial-gradient(circle, rgba(255, 140, 0, 0.3), transparent 50%),
+              radial-gradient(circle, rgba(255, 166, 0, 0.579), transparent 40%),
+              radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent 20%);
+  background-blend-mode: screen;
+  animation: animateNebula 30s linear infinite;
+}
+
+@keyframes animateNebula {
+  0% {
+      transform: translate(-100%, -100%) scale(1);
+      filter: blur(0px);
+  }
+  50% {
+      transform: translate(150%, 150%) scale(1.2);
+      filter: blur(50px);
+  }
+  100% {
+      transform: translate(-100%, -100%) scale(0.5);
+      filter: blur(0px);
+  }
+}
+.sky {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #001d3d, #000000);
+  overflow: hidden;
+}
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  box-shadow: 
+    50vw 20vh white, 
+    20vw 80vh white, 
+    80vw 60vh white, 
+    40vw 10vh white, 
+    70vw 30vh white, 
+    34vw 12vh white, 
+    77vw 26vh white, 
+    45vw 83vh white, 
+    43vw 71vh white, 
+    34vw 43vh white, 
+    84vw 56vh white, 
+    10vw 10vh white, 
+    15vw 50vh white, 
+    6vw 15vh white, 
+    20vw 30vh white, 
+    30vw 30vh white, 
+    45vw 40vh white, 
+    33vw 70vh white, 
+    25vw 80vh white, 
+    30vw 50vh white;
+  filter: blur(1px);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.button{
+  font-size: larger;
+  font-weight: bold;
+  width: 15em;
+  height: 3em;
+  text-align: center;
+  align-content: center;
+  border-radius: 5em;
+  border: 5px solid #ffa600;
+  background-color: transparent;
+}
+.button:hover{
+  font-size: larger;
+  font-weight: bold;
+  width: 15em;
+  height: 3em;
+  text-align: center;
+  align-content: center;
+  border-radius: 2em;
+  border: 5px solid #ffa600;
+  background-color: #ffa600;
+}
+
+
+@media (min-width: 900px) {
+  .column{
+    position: absolute;
+    top: 40vh;
+    left: 2em;
+    width: 50%;
+    gap:2em;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+  }
+  
+ } 
+ @media (max-width: 900px) {
+  .column{
+    position: absolute;
+    top: 12em;
+    left: 2em;
+    width: 80%;
+    gap: 3em;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.title{
+  text-align: start;
+  font-weight: bold;
+  font-size:xx-large;
+}
+.body{
+  font-size: large;
+  text-align: start;
+}
