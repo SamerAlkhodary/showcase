@@ -47,8 +47,7 @@ function HeroPage() {
   
  
     </div>      
-     
-
+    
   )
 }
 
